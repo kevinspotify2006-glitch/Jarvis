@@ -6,7 +6,7 @@ type Msg={role:'user'|'assistant';content:string};
 
 function chooseModel(text:string){
  const t=text.toLowerCase();
- if(/code|coding|javascript|typescript|react|next\.js|python|bug|debug|api|sql|programmeer|programming/.test(t)) return 'anthropic/claude-sonnet-4.5';
+ if(/code|coding|javascript|typescript|react|next\.js|python|bug|debug|api|sql|programmeer|programming/.test(t)) return '~anthropic/claude-sonnet-latest';
  if(text.length>5000||/analyseer|analyse|onderzoek|research|document/.test(t)) return 'google/gemini-2.5-pro';
  return 'openrouter/auto';
 }
